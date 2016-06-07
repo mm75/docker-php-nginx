@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y \
     php-pear \
     php5-gd \
     php5-pgsql \
+    php5-mysql \
     php5-mcrypt \
     php5-memcached \
     php5-memcache \
