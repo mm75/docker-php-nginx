@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     php5-dev \
     php5-cli \
     php5-intl \
-    php5-soap \
+    php-soap \
     php5-json \
     php5-curl \
     php5-fpm \
