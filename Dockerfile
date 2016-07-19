@@ -8,9 +8,9 @@ RUN export TERM=xterm \
     && export XDEBUG_CONFIG="idekey=dbgp" \
     && echo "export TERM=xterm" >> /root/.bashrc \
     && echo "export XDEBUG_CONFIG=\"idekey=dbgp\"" >> /root/.bashrc \
-    && apt-get update  \
-    && apt-get upgrade -y  \
-    && apt-get dist-upgrade -y
+    && apt-get update \
+    && apt-get upgrade -y \
+    && apt-get dist-upgrade -y \
     && apt-get install -y \
     curl \
     git \
