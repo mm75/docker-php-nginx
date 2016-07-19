@@ -34,7 +34,9 @@ RUN export TERM=xterm \
     nginx \
     net-tools \
     nano \
-    && RUN apt-get autoremove -y && apt-get clean && apt-get autoclean
+    && apt-get autoremove -y 
+    && apt-get clean 
+    && apt-get autoclean
 
 RUN sed -i "s/;date.timezone =/date.timezone = America\/Sao_Paulo/" /etc/php5/cli/php.ini \
     && sed -i "s/;date.timezone =/date.timezone = America\/Sao_Paulo/" /etc/php5/fpm/php.ini \
