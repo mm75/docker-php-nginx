@@ -5,8 +5,9 @@ MAINTAINER Jackson Veroneze <jackson@jacksonveroneze.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN export TERM=xterm \
-    && echo "export TERM=xterm" >> /root/.bashrc \
     && export XDEBUG_CONFIG="idekey=dbgp" \
+    && echo "export TERM=xterm" >> /root/.bashrc \
+    && echo "export XDEBUG_CONFIG=\"idekey=dbgp\"" >> /root/.bashrc \
     && apt-get update  \
     && apt-get upgrade -y  \
     && apt-get dist-upgrade -y
