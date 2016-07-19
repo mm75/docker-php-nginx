@@ -49,6 +49,8 @@ RUN sed -i "s/;date.timezone =/date.timezone = America\/Sao_Paulo/" /etc/php5/cl
     && sed -i "s/display_startup_errors = Off/display_startup_errors = On/" /etc/php5/cli/php.ini \
     && sed -i "s/display_startup_errors = Off/display_startup_errors = On/" /etc/php5/fpm/php.ini \
     && sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 5000M/" /etc/php5/cli/php.ini \
+    && sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 5000M/" /etc/php5/fpm/php.ini \
+    && sed -i "s/post_max_size = 8M/post_max_size = 5000M/" /etc/php5/cli/php.ini \
     && sed -i "s/post_max_size = 8M/post_max_size = 5000M/" /etc/php5/fpm/php.ini \
     && sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php5/fpm/php.ini \
     && sed -i "s/;listen.allowed_clients = 127.0.0.1/listen.allowed_clients = 0.0.0.0/" /etc/php5/fpm/pool.d/www.conf
