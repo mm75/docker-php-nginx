@@ -14,6 +14,9 @@ RUN export TERM=xterm \
     && apt-get install -y \
     curl \
     git \
+    nginx \
+    net-tools \
+    nano \
     php5-dev \
     php5-cli \
     php5-intl \
@@ -31,9 +34,6 @@ RUN export TERM=xterm \
     php5-xdebug \
     php5-ldap \
     php5-imagick \
-    nginx \
-    net-tools \
-    nano \
     && apt-get autoremove -y \
     && apt-get clean \
     && apt-get autoclean
