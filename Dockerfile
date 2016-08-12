@@ -48,6 +48,8 @@ RUN sed -i "s/;date.timezone =/date.timezone = America\/Sao_Paulo/" /etc/php5/cl
     && sed -i "s/display_errors = Off/display_errors = On/" /etc/php5/fpm/php.ini \
     && sed -i "s/display_startup_errors = Off/display_startup_errors = On/" /etc/php5/cli/php.ini \
     && sed -i "s/display_startup_errors = Off/display_startup_errors = On/" /etc/php5/fpm/php.ini \
+    && sed -i "s/log_errors = Off/log_errors = On/" /etc/php5/cli/php.ini \
+    && sed -i "s/log_errors = Off/log_errors = On/" /etc/php5/fpm/php.ini \
     && sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 5000M/" /etc/php5/cli/php.ini \
     && sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 5000M/" /etc/php5/fpm/php.ini \
     && sed -i "s/post_max_size = 8M/post_max_size = 5000M/" /etc/php5/cli/php.ini \
@@ -61,7 +63,7 @@ RUN adduser --disabled-password --gecos '' www \
 
 ADD default /etc/nginx/sites-available/
 
-ADD dev.ini /etc/php5/mods-available/dev.ini
+ADD xdebug.ini /etc/php5/mods-available
 
 ADD nginx.crt /etc/nginx/ssl/
 
