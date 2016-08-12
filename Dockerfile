@@ -59,7 +59,8 @@ RUN sed -i "s/;date.timezone =/date.timezone = America\/Sao_Paulo/" /etc/php5/cl
 
 RUN adduser --disabled-password --gecos '' www \
     && rm /etc/nginx/sites-available/default && rm /etc/nginx/sites-enabled/default \
-    && mkdir /etc/nginx/ssl/
+    && mkdir /etc/nginx/ssl/ \
+    && rm /etc/php5/mods-available/xdebug.ini
 
 ADD default /etc/nginx/sites-available/
 
@@ -69,7 +70,6 @@ ADD nginx.crt /etc/nginx/ssl/
 
 ADD nginx.key /etc/nginx/ssl/
 
-RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default \
-    && php5enmod dev
+RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
 EXPOSE 80 443
