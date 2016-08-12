@@ -1,4 +1,4 @@
-# Dockerfile PHP-Nginx [![](https://imagelayers.io/badge/jacksonveroneze/dockerphpnginx:latest.svg)](https://imagelayers.io/?images=jacksonveroneze/dockerphpnginx:latest 'Get your own badge on imagelayers.io')
+# Dockerfile PHP-Nginx [![Build Status](https://travis-ci.org/jacksonveroneze/docker-php-nginx.svg?branch=master)](https://travis-ci.org/jacksonveroneze/docker-php-nginx) [![](https://imagelayers.io/badge/jacksonveroneze/dockerphpnginx:latest.svg)](https://imagelayers.io/?images=jacksonveroneze/dockerphpnginx:latest 'Get your own badge on imagelayers.io')
 Dockerfile basis for image building with php and nginx.
 ## Build
 
