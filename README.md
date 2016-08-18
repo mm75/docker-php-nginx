@@ -29,4 +29,3 @@ Content is licensed under the MIT License - see the `LICENSE` file for details
 ### References
 * [Docker](https://www.docker.com/)
 * [DockerHub](https://hub.docker.com/)
-* 
