@@ -65,6 +65,11 @@ server {
 	log_not_found off;
 	}
 
+	log_format custom '$remote_addr - $remote_user [$time_local] '
+	   '"$request" $status $body_bytes_sent '
+	   '"$http_referer" "$http_user_agent" "$request_body"';
+
+	access_log /var/log/nginx/access.log custom;
 
 	# Only for nginx-naxsi used with nginx-naxsi-ui : process denied requests
 	#location /RequestDenied {
