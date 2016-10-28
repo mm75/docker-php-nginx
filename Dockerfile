@@ -72,4 +72,8 @@ ADD nginx.key /etc/nginx/ssl/
 
 RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
+RUN /usr/bin/easy_install supervisor
+RUN /usr/bin/easy_install supervisor-stdout
+ADD ./supervisord.conf /etc/supervisord.conf
+
 EXPOSE 80 443
