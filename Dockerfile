@@ -34,6 +34,7 @@ RUN export TERM=xterm \
     php5-xdebug \
     php5-ldap \
     php5-imagick \
+    supervisor \
     && apt-get autoremove -y \
     && apt-get clean \
     && apt-get autoclean
@@ -72,8 +73,8 @@ ADD nginx.key /etc/nginx/ssl/
 
 RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
-RUN /usr/bin/easy_install supervisor
-RUN /usr/bin/easy_install supervisor-stdout
-ADD ./supervisord.conf /etc/supervisord.conf
+ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+CMD ["/bin/supervisord", "-c /etc/supervisor/conf.d/supervisord.conf"]
 
 EXPOSE 80 443
